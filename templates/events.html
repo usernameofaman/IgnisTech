@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .maininput{ width: 50%; align-items: center; margin: auto;padding-top: 100px;}
+    </style>
+</head>
+<body>
+    <div class="maininput">
+        <form action="/Destination" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Event Name</label>
+            <input type="text" name="event_name" class="form-control" id="exampleFormControlInput1" placeholder="Event Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Date</label>
+            <input type="date" name="date" class="form-control" id="exampleFormControlInput1" placeholder="Date">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Time</label>
+            <input type="time" name="time" class="form-control" id="exampleFormControlInput1" placeholder="Time">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Location</label>
+            <input type="text" name="location" class="form-control" id="exampleFormControlInput1" placeholder="location">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Image</label>
+            <input type="file" name="image" class="form-control" id="exampleFormControlInput1" placeholder="Image">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>        
+        </form>
+      </div>
+      
+    
+</body>
+</html>
